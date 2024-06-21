@@ -1,0 +1,852 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Home </title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/jquery-ui.min.css">
+
+	<link rel="stylesheet" href="css/meanmenu.min.css">
+	<link rel="stylesheet" href="css/nivo-slider.css">
+	<link rel="stylesheet" href="css/owl.carousel.css">
+	<link rel="stylesheet" href="css/linearicons-icon-font.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="css/responsive.css" />
+
+</head>
+
+<body>
+
+	<header>
+		<div class="header-top-area ptb-10 hidden-xs header-top-area-4">
+			<div class="container">
+				<div class="row" style="margin-top: 10px;">
+					<div class="col-lg-3 col-md-4 col-sm-5">
+						<div class="header-top-right header-top-left-4">
+							<p class="" style="font-weight: bold;padding-left: 0px;letter-spacing: .5px;">FREE SHIPPING
+								ON ORDERS OVER ₹999</p>
+
+						</div>
+					</div>
+					<div class="col-lg-9 col-md-8 col-sm-7 header-top-right-4">
+
+						<div class="header-top-left">
+							<ul>
+								<li class="click_menu"><a href="#">My Account <i class="fa fa-angle-down"></i></a>
+									<ul class="click_menu_show">
+										<li><a href="customer-login.html">Compare Products</a></li>
+										<li><a href="user_accountpage.html">My Account</a></li>
+										<li><a href="index.html">My Wish List</a></li>
+										<li><a href="customer-login.html">Sign In</a></li>
+									</ul>
+								</li>
+								<li><a href="customer-login.html">Create an Account</a></li>
+								<?php if (isset($_SESSION['user'])): ?>
+								<li><a href="#">Welcome
+										<?php echo htmlspecialchars($_SESSION['user']); ?>
+									</a></li>
+								<?php endif; ?>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header-bottom-area home-page-2 ptb-10">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+						<div class="menu-search-box scnd-fix">
+							<form action="#">
+								<input type="text" placeholder="Search here..." />
+								<button><span class="lnr lnr-magnifier"></span></button>
+							</form>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+						<div class="logo logo2">
+							<h1>Silver Radiance</h1>
+							<a href="index.html">
+								<img src="img/logo-41.png" alt=""
+									style="width: auto; height: 70px;border-radius: 15px;padding-top: 5px;" />
+							</a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-3 hidden-xs">
+						<div class="header-bottom-right-4-inner">
+							<a href="#"><span class="lnr lnr-heart"></span></a>
+						</div>
+						<div class="header-bottom-right header-bottom-right-4">
+							<div class="shop-cart shop-cart-4" id="cart-icon">
+								<a href="cart.html"><span class="lnr lnr-cart"></span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="mainmenu-area home-page-2 mainmenu-area-4" id="main_h">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12">
+					<div class="mainmenu hidden-xs">
+						<nav>
+							<ul>
+								<li><a href="shop.html">Pooja Items</a>
+									<div class="megamenu">
+										<span>
+
+											<a href="shop.html">Silver Pooja Thali</a>
+											<a href="shop.html">Silver Diya</a>
+											<a href="shop.html">Others</a>
+
+										</span>
+									</div>
+								</li>
+								<li><a href="shop.html">Coins & bars</a>
+								</li>
+								<li><a href="shop.html">Pure Silverware</a>
+									<div class="megamenu megamenu2 living-megamenu">
+										<span>
+											<a href="shop.html">Silver Dinner Set</a>
+											<a href="shop.html">Silver Plates</a>
+											<a href="shop.html">Silver Glass</a>
+											<a href="shop.html">Silver Bowls</a>
+											<a href="shop.html">Silver Kalash</a>
+										</span>
+									</div>
+								</li>
+
+								<li><a href="shop.html">Gifts</a>
+									<div class="megamenu dining-megamenu">
+										<span>
+											<a href="shop.html">Wedding Gifts</a>
+											<a href="shop.html">Baby Shower Gifts</a>
+											<a href="shop.html">Return Gifts</a>
+
+										</span>
+									</div>
+								</li>
+
+								<li><a href="#">All pages</a>
+									<ul>
+										<li><a href="index.html">Home</a></li>
+										<li><a href="customer-login.html">login</a></li>
+										<li><a href="shop.html">shop </a></li>
+										<li><a href="cart.html">cart</a></li>
+										<li><a href="contact.html">contact us</a></li>
+										<li><a href="product-details.html">product-details</a></li>
+										<li><a href="checkout.html">checkout</a></li>
+										<li><a href="register.html">Register</a></li>
+										<li><a href="designservice.html">Design Service</a></li>
+										<li><a href="user_accountpage.html">User account</a></li>
+									</ul>
+								</li>
+								<li><a href="contact.html">contact</a></li>
+
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="new-product-area hot-deal-area dotted-5 new-product-4 pt-80">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-lg-12 col-md-12">
+					<div class="row" style="margin-bottom: 10px;">
+						<div class="col-lg-12">
+							<div class="single-static-banner">
+								<div class="single-static-img">
+									<a href="shop.html"><img src="img/banner/25.png" alt="" /></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="section-title section-title-4">
+						<h2>New Products</h2>
+					</div>
+					<div class="row" style="margin-bottom: -60px;">
+						<div class="new-product-home-4-active">
+							<div class="col-lg-12">
+								<div class="single-new-product" data-img="img/product/cc.png"
+									data-name="Silver Dinner Set" data-price="₹89,999">
+									<div class="product-img">
+										<a href="javascript:void(1);" onclick="redirectToProductDetails(this)">
+											<img src="img/product/cc.png" class="first_img" alt="" />
+										</a>
+									</div>
+									<div class="product-content text-center">
+										<a href="javascript:void(0);" onclick="redirectToProductDetails(this)">
+											<h3>Silver Dinner Set</h3>
+										</a>
+										<div class="product-price-star">
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star-o"></i>
+										</div>
+										<h4>₹89,999</h4>
+										<button class="add-to-cart-btn" data-product-name="Silver Dinner Set"
+											data-product-price="89999.00">Add to Cart</button>
+									</div>
+									<div class="product-icon-wrapper">
+										<div class="product-icon">
+											<ul>
+												<li><a href="#"><span class="lnr lnr-sync"></span></a></li>
+												<li><a href="#"><span class="lnr lnr-heart"></span></a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-lg-12">
+								<div class="single-new-product" data-img="img/product/114_3.jpg"
+									data-name="Antique Silver Bowl" data-price="₹10,999">
+									<div class="product-img">
+										<a href="javascript:void(1);" onclick="redirectToProductDetails(this)">
+											<img src="img/product/114_3.jpg" class="first_img" alt="" />
+										</a>
+									</div>
+									<div class="product-content text-center">
+										<a href="javascript:void(0);" onclick="redirectToProductDetails(this)">
+											<h3>Antique Silver Bowl</h3>
+										</a>
+										<div class="product-price-star">
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+										</div>
+										<h4>₹10,999</h4>
+										<button class="add-to-cart-btn" data-product-name="Antique  Silver Bowl	"
+											data-product-price="10999.00">Add to Cart</button>
+									</div>
+									<div class="product-icon-wrapper">
+										<div class="product-icon">
+											<ul>
+												<li><a href="#"><span class="lnr lnr-sync"></span></a></li>
+												<li><a href="#"><span class="lnr lnr-heart"></span></a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+
+							<div class="col-lg-12">
+								<div class="single-new-product" data-img="img/product/ee.png"
+									data-name="Silver Dinner Set " data-price="₹79,999">
+									<div class="product-img">
+										<a href="javascript:void(1);" onclick="redirectToProductDetails(this)">
+											<img src="img/product/ee.png" class="first_img" alt="" />
+										</a>
+									</div>
+									<div class="product-content text-center">
+										<a href="javascript:void(0);" onclick="redirectToProductDetails(this)">
+											<h3>Silver Dinner Set </h3>
+										</a>
+										<div class="product-price-star">
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star-o"></i>
+											<i class="fa fa-star-o"></i>
+										</div>
+										<h4>₹79,999</h4>
+										<button class="add-to-cart-btn" data-product-name="Silver Dinner Set "
+											data-product-price="79999.00">Add to Cart</button>
+									</div>
+									<div class="product-icon-wrapper">
+										<div class="product-icon">
+											<ul>
+												<li><a href="#"><span class="lnr lnr-sync"></span></a></li>
+												<li><a href="#"><span class="lnr lnr-heart"></span></a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-12">
+								<div class="single-new-product" data-img="img/product/114_3.jpg"
+									data-name="Antique Silver Bowl" data-price="₹10,999">
+									<div class="product-img">
+										<a href="javascript:void(1);" onclick="redirectToProductDetails(this)">
+											<img src="img/product/114_3.jpg" class="first_img" alt="" />
+										</a>
+									</div>
+									<div class="product-content text-center">
+										<a href="javascript:void(0);" onclick="redirectToProductDetails(this)">
+											<h3>Antique Silver Bowl</h3>
+										</a>
+										<div class="product-price-star">
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+										</div>
+										<h4>₹10,999</h4>
+										<button class="add-to-cart-btn" data-product-name="Antique  Silver Bowl	"
+											data-product-price="10999.00">Add to Cart</button>
+									</div>
+									<div class="product-icon-wrapper">
+										<div class="product-icon">
+											<ul>
+												<li><a href="#"><span class="lnr lnr-sync"></span></a></li>
+												<li><a href="#"><span class="lnr lnr-heart"></span></a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-12">
+								<div class="single-new-product" data-img="img/product/cc.png"
+									data-name="Silver Dinner Set" data-price="₹89,999">
+									<div class="product-img">
+										<a href="javascript:void(1);" onclick="redirectToProductDetails(this)">
+											<img src="img/product/cc.png" class="first_img" alt="" />
+										</a>
+									</div>
+									<div class="product-content text-center">
+										<a href="javascript:void(0);" onclick="redirectToProductDetails(this)">
+											<h3>Silver Dinner Set</h3>
+										</a>
+										<div class="product-price-star">
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star-o"></i>
+										</div>
+										<h4>₹89,999</h4>
+										<button class="add-to-cart-btn" data-product-name="Silver Dinner Set"
+											data-product-price="89999.00">Add to Cart</button>
+									</div>
+									<div class="product-icon-wrapper">
+										<div class="product-icon">
+											<ul>
+												<li><a href="#"><span class="lnr lnr-sync"></span></a></li>
+												<li><a href="#"><span class="lnr lnr-heart"></span></a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-12">
+								<div class="single-new-product" data-img="img/product/114_3.jpg"
+									data-name="Antique Silver Bowl" data-price="₹10,999">
+									<div class="product-img">
+										<a href="javascript:void(1);" onclick="redirectToProductDetails(this)">
+											<img src="img/product/114_3.jpg" class="first_img" alt="" />
+										</a>
+									</div>
+									<div class="product-content text-center">
+										<a href="javascript:void(0);" onclick="redirectToProductDetails(this)">
+											<h3>Antique Silver Bowl</h3>
+										</a>
+										<div class="product-price-star">
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+										</div>
+										<h4>₹10,999</h4>
+										<button class="add-to-cart-btn" data-product-name="Antique  Silver Bowl	"
+											data-product-price="10999.00">Add to Cart</button>
+									</div>
+									<div class="product-icon-wrapper">
+										<div class="product-icon">
+											<ul>
+												<li><a href="#"><span class="lnr lnr-sync"></span></a></li>
+												<li><a href="#"><span class="lnr lnr-heart"></span></a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="new-product-area hot-deal-area dotted-5 new-product-4 ptb-50"
+		style="margin-bottom: -110px;margin-top: 10px;">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12" style="margin-bottom: 10px;">
+					<div class="section-title section-title-4 section_4">
+						<h2>featured products</h2>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="new-product-home-2-active">
+					<div class="col-lg-12">
+						<div class="single-new-product" data-img="img/product/kk.webp" data-name="Silver Diya"
+							data-price="₹7,999">
+							<div class="product-img">
+								<a href="javascript:void(1);" onclick="redirectToProductDetails(this)">
+									<img src="img/product/kk.webp" class="first_img" alt="" />
+								</a>
+							</div>
+							<div class="product-content text-center">
+								<a href="javascript:void(0);" onclick="redirectToProductDetails(this)">
+									<h3>Silver Diya</h3>
+								</a>
+								<div class="product-price-star">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-o"></i>
+									<i class="fa fa-star-o"></i>
+								</div>
+								<h4>₹7,999</h4>
+								<button class="add-to-cart-btn" data-product-name="Silver Diya"
+									data-product-price="7999.00">Add to Cart</button>
+							</div>
+							<div class="product-icon-wrapper">
+								<div class="product-icon">
+									<ul>
+										<li><a href="#"><span class="lnr lnr-sync"></span></a></li>
+										<li><a href="#"><span class="lnr lnr-heart"></span></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="col-lg-12">
+						<div class="single-new-product" data-img="img/product/gg.webp" data-name="Silver Coffee Mug"
+							data-price="₹16,999">
+							<div class="product-img">
+								<a href="javascript:void(1);" onclick="redirectToProductDetails(this)">
+									<img src="img/product/gg.webp" class="first_img" alt="" />
+								</a>
+							</div>
+							<div class="product-content text-center">
+								<a href="javascript:void(0);" onclick="redirectToProductDetails(this)">
+									<h3>Silver Coffee Mug</h3>
+								</a>
+								<div class="product-price-star">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-o"></i>
+								</div>
+								<h4>₹16,999</h4>
+								<button class="add-to-cart-btn" data-product-name="Silver Coffee Mug"
+									data-product-price="16999.00">Add to Cart</button>
+							</div>
+							<div class="product-icon-wrapper">
+								<div class="product-icon">
+									<ul>
+										<li><a href="#"><span class="lnr lnr-sync"></span></a></li>
+										<li><a href="#"><span class="lnr lnr-heart"></span></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-12">
+						<div class="single-new-product" data-img="img/product/hh.webp" data-name="Silver Diya Aarti"
+							data-price="₹1,199">
+							<div class="product-img">
+								<a href="javascript:void(1);" onclick="redirectToProductDetails(this)">
+									<img src="img/product/hh.webp" class="first_img" alt="" />
+								</a>
+							</div>
+							<div class="product-content text-center">
+								<a href="javascript:void(0);" onclick="redirectToProductDetails(this)">
+									<h3>Silver Diya Aarti</h3>
+								</a>
+								<div class="product-price-star">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+								</div>
+								<h4>₹1,199</h4>
+								<button class="add-to-cart-btn" data-product-name="Silver Diya Aarti"
+									data-product-price="1199.00">Add to Cart</button>
+							</div>
+							<div class="product-icon-wrapper">
+								<div class="product-icon">
+									<ul>
+										<li><a href="#"><span class="lnr lnr-sync"></span></a></li>
+										<li><a href="#"><span class="lnr lnr-heart"></span></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-12">
+						<div class="single-new-product" data-img="img/product/ii.webp"
+							data-name="Silver Diya - Twin Peacock" data-price="₹3,999">
+							<div class="product-img">
+								<a href="javascript:void(1);" onclick="redirectToProductDetails(this)">
+									<img src="img/product/ii.webp" class="first_img" alt="" />
+								</a>
+							</div>
+							<div class="product-content text-center">
+								<a href="javascript:void(0);" onclick="redirectToProductDetails(this)">
+									<h3>Silver Diya - Twin Peacock </h3>
+								</a>
+								<div class="product-price-star">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+								</div>
+								<h4>₹3,999</h4>
+								<button class="add-to-cart-btn" data-product-name="Silver Diya - Twin Peacock "
+									data-product-price="3999.00">Add to Cart</button>
+							</div>
+							<div class="product-icon-wrapper">
+								<div class="product-icon">
+									<ul>
+										<li><a href="#"><span class="lnr lnr-sync"></span></a></li>
+										<li><a href="#"><span class="lnr lnr-heart"></span></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-12">
+						<div class="single-new-product" data-img="img/product/jj.webp" data-name="Silver Antique Diya"
+							data-price="₹7,199">
+							<div class="product-img">
+								<a href="javascript:void(1);" onclick="redirectToProductDetails(this)">
+									<img src="img/product/jj.webp" class="first_img" alt="" />
+								</a>
+							</div>
+							<div class="product-content text-center">
+								<a href="javascript:void(0);" onclick="redirectToProductDetails(this)">
+									<h3>Silver Antique Diya</h3>
+								</a>
+								<div class="product-price-star">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-o"></i>
+								</div>
+								<h4>₹7,999</h4>
+								<button class="add-to-cart-btn" data-product-name="Silver Antique Diya"
+									data-product-price="7999.00">Add to Cart</button>
+							</div>
+							<div class="product-icon-wrapper">
+								<div class="product-icon">
+									<ul>
+										<li><a href="#"><span class="lnr lnr-sync"></span></a></li>
+										<li><a href="#"><span class="lnr lnr-heart"></span></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-12">
+						<div class="single-new-product" data-img="img/product/jj.webp" data-name="Silver Antique Diya"
+							data-price="₹7,199">
+							<div class="product-img">
+								<a href="javascript:void(1);" onclick="redirectToProductDetails(this)">
+									<img src="img/product/jj.webp" class="first_img" alt="" />
+								</a>
+							</div>
+							<div class="product-content text-center">
+								<a href="javascript:void(0);" onclick="redirectToProductDetails(this)">
+									<h3>Silver Antique Diya</h3>
+								</a>
+								<div class="product-price-star">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-o"></i>
+								</div>
+								<h4>₹7,999</h4>
+								<button class="add-to-cart-btn" data-product-name="Silver Antique Diya"
+									data-product-price="7999.00">Add to Cart</button>
+							</div>
+							<div class="product-icon-wrapper">
+								<div class="product-icon">
+									<ul>
+										<li><a href="#"><span class="lnr lnr-sync"></span></a></li>
+										<li><a href="#"><span class="lnr lnr-heart"></span></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="static-slider-area dotted-style new-product-4 pb-80 hidden-xs"
+		style="margin-bottom: -60px;margin-left:86px ;margin-right: 85px;">
+		<div style="margin-bottom: 15px;font-family:Georgia, 'Times New Roman', Times, serif; margin-left: 30%;">
+			<h style="font-size: 24px;font-style: italic;">" Your Trusted Partner for Precious Investments "</h>
+		</div>
+
+		<div class="static-slider-active">
+			<div class="static-single-slider">
+
+				<div class="static-slider-img">
+					<img src="img/static/8.png" alt="" />
+				</div>
+
+			</div>
+			<div class="static-single-slider">
+				<div class="static-slider-img">
+					<img src="img/static/7.jpg" alt="" />
+				</div>
+
+			</div>
+			<div class="static-single-slider">
+				<div class="static-slider-img">
+					<img src="img/static/7.jpg" alt="" />
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="contact-area ptb-40">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 mar_b-30">
+					<div class="contuct-info text-center">
+						<h4>Sign up for news & offers!</h4>
+						<p>You may safely unsubscribe at any time</p>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-8 col-sm-12 col-lg-offset-1 col-xs-12">
+					<div class="search-box">
+						<form action="#">
+							<input type="email" placeholder="Enter your email address" />
+							<button><span class="lnr lnr-envelope"></span></button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer-area footer-area-4 ptb-80">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4 col-md-5 col-sm-6 col-xs-12 mar_b-30">
+					<div class="footer-wrapper">
+						<div class="footer-logo">
+							<a href="#"><img src="img/logo-41.png" alt="" /></a>
+						</div>
+						<p>We specialize in delivering premium silver products, ensuring quality craftsmanship and a
+							seamless shopping experience for our customers.</p>
+						<ul>
+							<li>
+								<span>Address : </span> Bangalore IN
+							</li>
+							<li>
+								<span>Phone: </span>+91 987654321
+							</li>
+							<li>
+								<span>Email:</span> <a href="#">admin@abcdefg.company</a>
+							</li>
+						</ul>
+						<ul class="footer-social">
+							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="#"><i class="fa fa-youtube"></i></a></li>
+							<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+							<li><a href="#"><i class="fa fa-flickr"></i></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-2 col-md-3 hidden-sm col-xs-12 mar_b-30">
+					<div class="footer-wrapper">
+						<div class="footer-title">
+							<a href="#">
+								<h3>useful links</h3>
+							</a>
+						</div>
+						<div class="footer-wrapper">
+							<ul class="usefull-link">
+								<li><a href="#">Contact us</a></li>
+								<li><a href="#">Site map</a></li>
+								<li><a href="#">About us</a></li>
+								<li><a href="#">Specials</a></li>
+								<li><a href="#">My Cart</a></li>
+								<li><a href="#">Wishlist</a></li>
+								<li><a href="#">Custom service</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 hidden-md hidden-sm col-xs-12 mar_b-30">
+					<div class="footer-wrapper">
+						<div class="footer-title">
+							<a href="#">
+								<h3>useful links</h3>
+							</a>
+						</div>
+						<div class="footer-wrapper">
+							<ul class="usefull-link">
+								<li><a href="#">Contact us</a></li>
+								<li><a href="#">Site map</a></li>
+								<li><a href="#">About us</a></li>
+								<li><a href="#">Specials</a></li>
+								<li><a href="#">My Cart</a></li>
+								<li><a href="#">Wishlist</a></li>
+								<li><a href="#">Custom service</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+					<div class="footer-wrapper">
+						<div class="footer-title">
+							<a href="#">
+								<h3>useful links</h3>
+							</a>
+						</div>
+						<div class="footer-wrapper">
+							<ul class="usefull-link">
+								<li><a href="#">Contact us</a></li>
+								<li><a href="#">Site map</a></li>
+								<li><a href="#">About us</a></li>
+								<li><a href="#">Specials</a></li>
+								<li><a href="#">My Cart</a></li>
+								<li><a href="#">Wishlist</a></li>
+								<li><a href="#">Custom service</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="copyright-area copyright-4">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mar_b-30">
+					<div class="copyright text-left">
+						<p>2023 @ All Rights Reserved - <a href="#"></a></p>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+					<div class="copyright-img text-right">
+						<a href="#"><img src="img/payment.png" alt="" /></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/vendor/jquery-1.12.0.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.meanmenu.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script src="js/jquery.scrolly.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/jquery.countdown.min.js"></script>
+	<script src="js/jquery.nivo.slider.js"></script>
+	<script src="js/plugins.js"></script>
+	<script src="js/main.js"></script>
+
+	<script>
+		let cartItems = [];
+		function addToCart(productName, productPrice) {
+			const existingProductIndex = cartItems.findIndex(item => item.name === productName);
+			if (existingProductIndex !== -1) {
+				cartItems[existingProductIndex].quantity++;
+			} else {
+				cartItems.push({
+					name: productName,
+					price: productPrice,
+					quantity: 1
+				});
+			}
+			updateCartIcon();
+			localStorage.setItem('cart', JSON.stringify(cartItems));
+			console.log(cartItems);
+		}
+
+
+		function updateCartIcon() {
+			const cartIcon = document.querySelector('.shop-cart-4 a');
+			const numberOfItems = cartItems.reduce((total, item) => total + item.quantity, 0);
+			cartIcon.setAttribute('data-quantity', numberOfItems);
+			cartIcon.innerHTML = numberOfItems > 0 ? `<span class="lnr lnr-cart"></span>` : '';
+		}
+
+		const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
+		addToCartButtons.forEach(button => {
+			button.addEventListener('click', () => {
+
+				const productName = button.getAttribute('data-product-name');
+				const productPrice = button.getAttribute('data-product-price');
+
+
+				addToCart(productName, productPrice);
+			});
+		});
+	</script>
+
+	<style>
+		.shop-cart-4 {
+			position: relative;
+		}
+
+		.shop-cart-4 a::before {
+			content: attr(data-quantity);
+			background: rgb(215, 215, 215) none repeat scroll 0 0;
+			border-radius: 50%;
+			height: 20px;
+			width: 20px;
+			color: #000000;
+			font-size: 15px;
+			text-align: center;
+			position: absolute;
+			top: -9px;
+			right: -4px;
+		}
+	</style>
+
+	<script>
+		function redirectToProductDetails(element) {
+			const productImg = element.closest('.single-new-product').getAttribute('data-img');
+			const productName = element.closest('.single-new-product').getAttribute('data-name');
+			const productPrice = element.closest('.single-new-product').getAttribute('data-price');
+			window.location.href = `product-details.html?img=${productImg}&name=${productName}&price=${productPrice}`;
+		}
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Register</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="tel"],
+    select {
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .password-guidelines {
+      font-size: 12px;
+      color: #888;
+      margin-top: 5px;
+    }
+
+    .strength-meter {
+      height: 5px;
+      background: #ddd;
+      margin-top: 5px;
+    }
+
+    .strength-meter .strength {
+      height: 100%;
+      width: 0;
+      background: red;
+    }
+
+    .error {
+      color: red;
+      font-size: 12px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #007bff;
+      border: none;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2>Register</h2>
+    <form id="registrationForm" action="connect.php" method="post">
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" name="firstName" required>
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" name="lastName" required>
+      </div>
+      <div class="form-group">
+        <label for="gender">Gender</label>
+        <select id="gender" name="gender" required>
+          <option value="" disabled selected>Select your gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        <div class="error" id="emailError"></div>
+      </div>
+      <div class="form-group">
+        <label for="number">Number</label>
+        <input type="tel" id="number" name="number" required>
+        <div class="error" id="phoneError"></div>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+        <div class="password-guidelines">
+          Password must be at least 8 characters long, contain uppercase, lowercase, a number, and a special character.
+        </div>
+        <div class="strength-meter">
+          <div class="strength"></div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="confirm_password">Confirm Password</label>
+        <input type="password" id="confirm_password" name="confirm_password" required>
+        <div class="error" id="confirmError"></div>
+      </div>
+      <button type="submit" name="register">Register</button>
+    </form>
+  </div>
+
+  <script>
+    $(document).ready(function () {
+      function validateEmail(email) {
+        var re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        return re.test(String(email).toLowerCase());
+      }
+
+      function validatePhoneNumber(number) {
+        var re = /^[6-9]\d{9}$/;
+        return re.test(String(number));
+      }
+
+      $('#password').on('input', function () {
+        var strength = 0;
+        var password = $(this).val();
+        if (password.length >= 8) strength++;
+        if (password.match(/[a-z]+/)) strength++;
+        if (password.match(/[A-Z]+/)) strength++;
+        if (password.match(/[0-9]+/)) strength++;
+        if (password.match(/[$@#&!]+/)) strength++;
+        var strengthPercentage = (strength / 5) * 100;
+        var color = 'red';
+        if (strengthPercentage > 80) color = 'green';
+        else if (strengthPercentage > 60) color = 'yellow';
+        else if (strengthPercentage > 40) color = 'orange';
+        $('.strength-meter .strength').css({
+          width: strengthPercentage + '%',
+          background: color
+        });
+      });
+
+      $('#confirm_password').on('input', function () {
+        var password = $('#password').val();
+        var confirmPassword = $(this).val();
+        if (password !== confirmPassword) {
+          $('#confirmError').text('Passwords do not match');
+        } else {
+          $('#confirmError').text('');
+        }
+      });
+
+      $('#email').on('input', function () {
+        var email = $(this).val();
+        if (!validateEmail(email)) {
+          $('#emailError').text('Invalid email format');
+        } else {
+          $('#emailError').text('');
+        }
+      });
+
+      $('#number').on('input', function () {
+        var number = $(this).val();
+        if (!validatePhoneNumber(number)) {
+          $('#phoneError').text('Invalid phone number format');
+        } else {
+          $('#phoneError').text('');
+        }
+      });
+
+      $('#registrationForm').on('submit', function (event) {
+        var password = $('#password').val();
+        var confirmPassword = $('#confirm_password').val();
+        var email = $('#email').val();
+        var number = $('#number').val();
+
+        if (password !== confirmPassword) {
+          event.preventDefault();
+          $('#confirmError').text('Passwords do not match');
+        }
+
+        if (!validateEmail(email)) {
+          event.preventDefault();
+          $('#emailError').text('Invalid email format');
+        }
+
+        if (!validatePhoneNumber(number)) {
+          event.preventDefault();
+          $('#phoneError').text('Invalid phone number format');
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
